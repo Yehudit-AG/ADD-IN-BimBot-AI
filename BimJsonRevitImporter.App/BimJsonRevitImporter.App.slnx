@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="../BimJsonRevitImporter.Domain/BimJsonRevitImporter.Domain.csproj">
+    <Platform Solution="Debug|x64" Project="x64" />
+  </Project>
+  <Project Path="../BimJsonRevitImporter.Revit/BimJsonRevitImporter.Revit.csproj">
+    <Platform Solution="Debug|x64" Project="x64" />
+  </Project>
+  <Project Path="../BimJsonRevitImporters.UI/BimJsonRevitImporters.UI.csproj">
+    <Platform Solution="Debug|x64" Project="x64" />
+  </Project>
+  <Project Path="BimJsonRevitImporter.App.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>
