@@ -71,6 +71,8 @@
     <Compile Include="CmdHello.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RevitApp.cs" />
+    <Compile Include="RevitEventDispatcher.cs" />
+    <Compile Include="RevitExternalEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BimJsonRevitImporter.Domain\BimJsonRevitImporter.Domain.csproj">

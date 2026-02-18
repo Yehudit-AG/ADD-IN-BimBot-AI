@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CadSelectionHelper.cs" />
+    <Compile Include="Services\RevitQueryService.cs" />
+    <Compile Include="Services\UnitService.cs" />
+    <Compile Include="Services\WallImportService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BimJsonRevitImporter.Domain\BimJsonRevitImporter.Domain.csproj">

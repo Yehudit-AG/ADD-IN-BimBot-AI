@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,15 +50,8 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RevitAPI">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="RevitAPIUI">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,7 +61,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BimJson\BimJsonReader.cs" />
+    <Compile Include="BimJson\BimJsonWallFeature.cs" />
+    <Compile Include="BimJson\PointMm.cs" />
+    <Compile Include="BimJson\WallGroup.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Messaging\CadInstanceInfo.cs" />
+    <Compile Include="Messaging\Diagnostic.cs" />
+    <Compile Include="Messaging\DiagnosticSeverity.cs" />
+    <Compile Include="Messaging\GetSelectableDataPayload.cs" />
+    <Compile Include="Messaging\ImportItemResult.cs" />
+    <Compile Include="Messaging\ImportItemStatus.cs" />
+    <Compile Include="Messaging\ImportReport.cs" />
+    <Compile Include="Messaging\ImportWallsRequestPayload.cs" />
+    <Compile Include="Messaging\IRevitEventDispatcher.cs" />
+    <Compile Include="Messaging\LevelInfo.cs" />
+    <Compile Include="Messaging\RevitRequest.cs" />
+    <Compile Include="Messaging\RevitResponse.cs" />
+    <Compile Include="Messaging\RevitRequestType.cs" />
+    <Compile Include="Messaging\WallTypeInfo.cs" />
+    <Compile Include="Messaging\WallTypeMappingItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
