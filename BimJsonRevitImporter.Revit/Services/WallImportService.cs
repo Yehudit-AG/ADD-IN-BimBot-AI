@@ -121,6 +121,13 @@ namespace BimJsonRevitImporter.Revit.Services
                         {
                             var key = Math.Round(w.ThicknessCm, 2);
                             var wallTypeId = mappingByThickness[key];
+                            var wallType = doc.GetElement(wallTypeId) as WallType;
+                            if (wallType != null && wallType.Name == "Wall-Ignor")
+                            {
+                                report.Skipped++;
+                                report.ItemResults.Add(new ImportItemResult { SourceWallId = w.Id, Status = ImportItemStatus.Skipped, ReasonCode = "WALL_IGNOR", Message = "Wall type 'Wall-Ignor' is excluded from creation." });
+                                continue;
+                            }
                             XYZ p1Feet = new XYZ(
                                 UnitService.MmToFeet(w.P1.X),
                                 UnitService.MmToFeet(w.P1.Y),
